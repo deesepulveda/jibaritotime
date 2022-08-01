@@ -1,0 +1,140 @@
+.menu-section {
+  height: 120rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: url(../public/images/food.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -2;
+  }
+
+  .menu-wrapper {
+    @include keep-it-hundo;
+    @include flex-center-col;
+
+    .menu-title {
+      width: 80%;
+      height: auto;
+      position: relative;
+      color: $color-lite;
+      text-align: left;
+      font-size: 4rem;
+      font-family: $secondary-font;
+      -webkit-text-stroke: 0.1rem $color-lite;
+      -webkit-text-fill-color: transparent;
+
+      &::after {
+        content: "";
+        @include keep-it-hundo;
+        position: absolute;
+        left: 50%;
+        bottom: -5%;
+        @include transformX;
+        border-bottom: 0.1rem dotted $color-lite;
+      }
+    }
+
+    .menu-slider-wrapper {
+      width: 100%;
+      height: auto;
+      margin-top: 4rem;
+      //   border: 1px solid red;
+
+      .menu-box-slider {
+        width: 31rem;
+        height: 90rem;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        // border: 1px solid green;
+
+        .menu-slides {
+          @include keep-it-hundo;
+          position: relative;
+          position: absolute;
+          color: $color-lite;
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-topLeftZero;
+            background-color: $color-dark;
+            opacity: 0.6;
+            z-index: -1;
+          }
+
+          .menu-slides-title {
+            padding: 4rem 1rem;
+            font-size: 1.75rem;
+            text-transform: capitalize;
+          }
+
+          .menu-slides-items-box {
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+
+            .menu-slides-ul {
+              @include keep-it-hundo;
+
+              .menu-slides-li {
+                width: 100%;
+                height: auto;
+                list-style-type: none;
+
+                &:not(:last-child) {
+                  margin-bottom: 1rem;
+                }
+
+                .menu-slides-li-title {
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: flex-end;
+                  color: $color-green;
+
+                  .menu-slides-li-title-item,
+                  .menu-slides-li-title-price {
+                    width: auto;
+                    font-size: 1.25rem;
+                    font-family: $secondary-font;
+                    text-transform: capitalize;
+                  }
+
+                  .menu-slides-li-border {
+                    width: 30%;
+                    height: 100%;
+
+                    border-bottom: 0.1rem dotted $color-green;
+                  }
+                }
+
+                .menu-slides-li-content {
+                  margin: 0.5rem 0 0 1.5rem;
+                  text-align: left;
+                  text-transform: initial;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ const bottomContentBoxes = document.querySelectorAll(
 );
 const prevBtn = document.querySelector(".hero-container-bottom-content-prev");
 const nextBtn = document.querySelector(".hero-container-bottom-content-next");
+const menuSlides = document.querySelectorAll(".menu-slides");
 
 // Media Query for Nav
 const mediaQueryDesktopMin = window.matchMedia("(min-width: 1280px)");

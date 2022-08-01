@@ -102,7 +102,7 @@
         }
 
         &:hover {
-          color: $color-green;
+          color: rgb(46, 223, 46);
         }
       }
     }
@@ -119,5 +119,5 @@
 
 .navBackground {
   background-color: $color-dark;
-  opacity: 0.8;
+  opacity: 0.9;
 }
