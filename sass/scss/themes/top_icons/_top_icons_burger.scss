@@ -1,0 +1,106 @@
+.top-icons-container {
+  width: 100%;
+  max-width: 120rem;
+  height: 1rem;
+  margin: 0 auto;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  @include transformX;
+  z-index: 100;
+
+  @include desktop {
+    & {
+      display: none;
+    }
+  }
+
+  .burger-box {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: calc(0% + 1rem);
+    right: 2%;
+    @include flex-center;
+    align-items: flex-start;
+
+    .burger-box-container {
+      width: 4rem;
+      height: 2rem;
+      margin-top: 1.5rem;
+      position: relative;
+      @include flex-center-col;
+      cursor: pointer;
+
+      .top,
+      .middle,
+      .bottom {
+        height: 0.3rem;
+        position: relative;
+        position: absolute;
+        background-color: $color-lite;
+        border: 0.1rem solid $color-lite;
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
+        overflow: hidden;
+        @include transit3;
+      }
+
+      .top,
+      .bottom {
+        width: 100%;
+      }
+
+      .top {
+        top: 0;
+      }
+
+      .middle {
+        width: 70%;
+        top: 50%;
+        right: 0%;
+        @include transformY;
+      }
+
+      .bottom {
+        bottom: 0;
+      }
+
+      // JS CLASS TRIGGERS
+
+      .removeTopBottom {
+        transform: translateX(200vw);
+        -webkit-transform: translateX(200vw);
+        -moz-transform: translateX(200vw);
+        -ms-transform: translateX(200vw);
+        -o-transform: translateX(200vw);
+      }
+
+      .rotateMiddleOne {
+        width: 100%;
+        background-color: $color-lite;
+        border: 0.1rem solid $color-lite;
+        transform: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+      }
+
+      .rotateMiddleTwo {
+        width: 100%;
+        background-color: $color-lite;
+        border: 0.1rem solid $color-lite;
+        transform: rotate(-225deg);
+        -webkit-transform: rotate(-225deg);
+        -moz-transform: rotate(-225deg);
+        -ms-transform: rotate(-225deg);
+        -o-transform: rotate(-225deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.hero-container-bottom {
+  width: 100%;
+  height: 35%;
+  position: relative;
+  background-color: $color-lite;
+
+  @include tabletLandscape {
+    & {
+      height: 40%;
+    }
+  }
+
+  @include desktop {
+    & {
+      height: 35%;
+    }
+  }
+
+  .hero-container-bottom-content {
+    @include keep-it-hundo;
+    max-width: 120rem;
+    margin: 0 auto;
+    position: relative;
+
+    .hero-container-bottom-content-slider {
+      width: 70%;
+      height: 85%;
+      margin: 1rem auto 0;
+      position: relative;
+      overflow: hidden;
+      border: 0.15rem dotted $color-dark;
+
+      @include tabletPortrait {
+        & {
+          width: 60%;
+        }
+      }
+
+      @include desktop {
+        & {
+          width: 90%;
+          height: 90%;
+          display: flex;
+          flex-direction: row;
+          border: none;
+        }
+      }
+
+      .hero-container-bottom-content-boxes {
+        @include keep-it-hundo;
+        position: absolute;
+
+        border: 1px solid white;
+        @include transit4;
+        @include flex-center-col;
+
+        @include desktop {
+          & {
+            width: calc(100% / 3);
+            position: relative;
+            margin: 0 2rem;
+            border: 0.15rem dotted $color-dark;
+          }
+        }
+
+        .hero-bottom-content-info-title {
+          width: 100%;
+          height: auto;
+          font-size: 2rem;
+          letter-spacing: 0.3rem;
+          font-family: $secondary-font;
+
+          @include tabletPortrait {
+            & {
+              font-size: 2.5rem;
+            }
+          }
+
+          @include desktop {
+            & {
+              font-size: 2rem;
+            }
+          }
+        }
+
+        .hero-bottom-content-info-info {
+          width: 100%;
+          height: auto;
+          margin-top: 1rem;
+          padding: 1rem;
+
+          p {
+            font-size: 1.25rem;
+            text-transform: capitalize;
+
+            @include tabletPortrait {
+              & {
+                margin-top: 2rem;
+                font-size: 1.75rem;
+              }
+            }
+
+            @include desktop {
+              & {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+
+        .hero-bottom-content-info-button-box {
+          width: 100%;
+          height: auto;
+          margin-top: 2rem;
+
+          @include tabletLandscape {
+            & {
+              margin-top: 1rem;
+            }
+          }
+
+          @include desktop {
+            & {
+              margin-top: 3rem;
+            }
+          }
+
+          .hero-bottom-content-info-button {
+            @include keep-it-hundo;
+            padding: 0.75rem 2rem;
+            font-size: 1.15rem;
+            letter-spacing: 0.3rem;
+            text-decoration: none;
+            border: 0.1rem solid $color-green;
+            color: $color-green;
+            @include transit4;
+
+            @include desktop {
+              & {
+                font-size: 1.25rem;
+              }
+            }
+
+            &:hover {
+              background-color: $color-green;
+              color: $color-lite;
+              font-family: $secondary-font;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-container-bottom-content-prev,
+    .hero-container-bottom-content-next {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 50%;
+      @include transformY;
+      @include flex-center;
+      cursor: pointer;
+
+      @include desktop {
+        & {
+          display: none;
+        }
+      }
+
+      i {
+        font-size: 3rem;
+        @include transit3;
+
+        @include tabletPortrait {
+          & {
+            font-size: 4rem;
+          }
+        }
+
+        &:hover {
+          color: $color-green;
+        }
+      }
+    }
+
+    .hero-container-bottom-content-prev {
+      left: 3%;
+
+      @include tabletPortrait {
+        & {
+          left: 10%;
+        }
+      }
+    }
+
+    .hero-container-bottom-content-next {
+      right: 3%;
+
+      @include tabletPortrait {
+        & {
+          right: 10%;
+        }
+      }
+    }
+  }
+}

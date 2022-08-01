@@ -1,0 +1,8 @@
+.hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  @include absol-topLeftZero;
+  @include flex-center-col;
+  overflow: hidden;
+}

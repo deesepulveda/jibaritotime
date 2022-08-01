@@ -1,0 +1,185 @@
+.hero-container-top {
+  width: 100%;
+  height: 65%;
+  position: relative;
+
+  @include tabletLandscape {
+    & {
+      height: 60%;
+    }
+  }
+
+  @include desktop {
+    & {
+      height: 65%;
+    }
+  }
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: linear-gradient(to bottom, #050505, #050505c9);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-image: url(../public/images/JibaritoTimeNight.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+
+  .hero-container-top-content {
+    @include keep-it-hundo;
+    max-width: 120rem;
+    margin: 0 auto;
+    @include flex-center-col;
+
+    .hero-container-top-content-title {
+      width: 80%;
+      height: auto;
+      margin-top: 5rem;
+      font-size: 5rem;
+      font-family: $quaternary-font;
+      text-transform: capitalize;
+      color: $color-lite;
+
+      @include tabletPortrait {
+        & {
+          font-size: 9rem;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          font-size: 13rem;
+        }
+      }
+    }
+
+    .hero-container-top-content-subtitle {
+      width: 80%;
+      height: auto;
+      margin-top: 1rem;
+      font-size: 1.75rem;
+      letter-spacing: 0.4rem;
+      color: $color-lite;
+      word-spacing: 0.4rem;
+
+      @include tabletPortrait {
+        & {
+          margin-top: 2rem;
+          font-size: 2rem;
+        }
+      }
+
+      @include desktop {
+        & {
+          margin-top: 4rem;
+          font-size: 2rem;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          font-size: 3rem;
+          letter-spacing: 0.5rem;
+        }
+      }
+    }
+
+    .hero-container-top-content-buttons {
+      width: 80%;
+      height: auto;
+      @include flex-center-col;
+      margin-top: 5rem;
+
+      @include desktop {
+        & {
+          flex-direction: row;
+          margin-top: 2rem;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          margin-top: 4rem;
+        }
+      }
+
+      .cta-btn {
+        width: 17rem;
+        height: 3rem;
+        @include flex-center;
+        @include transit3;
+
+        @include tabletPortrait {
+          & {
+            width: 20rem;
+            height: 4rem;
+          }
+        }
+
+        &:nth-of-type(1) {
+          border: 0.1rem solid $color-lite;
+
+          @include desktop {
+            & {
+              margin-right: 2rem;
+            }
+          }
+        }
+
+        &:nth-of-type(1):hover {
+          background-color: $color-lite;
+        }
+
+        &:nth-of-type(2) {
+          margin-top: 1rem;
+          border: 0.1rem solid $color-green;
+          background-color: $color-green;
+
+          @include desktop {
+            & {
+              margin-top: 0;
+            }
+          }
+        }
+
+        &:nth-of-type(2):hover {
+          background-color: rgb(21, 102, 21);
+          border: 0.1rem solid rgb(21, 102, 21);
+        }
+
+        .cta-btn-link {
+          width: 100%;
+          height: auto;
+          text-decoration: none;
+          color: $color-lite;
+          font-size: 1.5rem;
+          letter-spacing: 0.3rem;
+          @include transit3;
+
+          @include tabletPortrait {
+            & {
+              font-size: 2rem;
+            }
+          }
+
+          &:hover {
+            font-family: $secondary-font;
+          }
+        }
+
+        .order-link:hover {
+          color: $color-dark;
+        }
+      }
+    }
+  }
+}

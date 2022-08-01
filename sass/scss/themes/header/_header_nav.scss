@@ -1,0 +1,118 @@
+.header-nav {
+  width: 100vw;
+  height: calc(100vh + 1rem);
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  @include transit4;
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
+
+  @include desktop {
+    & {
+      height: 8rem;
+      background-color: transparent;
+    }
+  }
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.95;
+    z-index: -1;
+
+    @include desktop {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  .header-ul {
+    width: 18rem;
+    height: 70%;
+    margin: 0 auto;
+    @include flex-center-col;
+    align-items: flex-start;
+
+    @include desktop {
+      & {
+        @include keep-it-hundo;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .header-li {
+      width: auto;
+      height: auto;
+      list-style-type: none;
+      margin-top: 3rem;
+      text-align: left;
+      @include transit3;
+
+      @include desktop {
+        & {
+          margin-top: 0;
+        }
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+
+        @include desktop {
+          & {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+          }
+        }
+      }
+
+      .header-links {
+        text-decoration: none;
+        color: $color-lite;
+        letter-spacing: 0.7rem;
+        font-size: 2.5rem;
+        text-shadow: 0.3rem 0.3rem 0.4rem $color-dark;
+
+        @include desktop {
+          & {
+            font-size: 1.25rem;
+            letter-spacing: 0.5rem;
+          }
+        }
+
+        &:hover {
+          color: $color-green;
+        }
+      }
+    }
+  }
+}
+
+.showNav {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
