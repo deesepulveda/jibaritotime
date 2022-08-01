@@ -28,9 +28,10 @@
     @include keep-it-hundo;
     @include absol-topLeftZero;
     background-image: url(../public/images/JibaritoTimeNight.jpg);
-    background-position: left;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     z-index: -2;
   }
 

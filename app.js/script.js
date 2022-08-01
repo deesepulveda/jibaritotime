@@ -12,6 +12,9 @@ const bottomContentBoxes = document.querySelectorAll(
 const prevBtn = document.querySelector(".hero-container-bottom-content-prev");
 const nextBtn = document.querySelector(".hero-container-bottom-content-next");
 
+// Media Query for Nav
+const mediaQueryDesktopMin = window.matchMedia("(min-width: 1280px)");
+
 // Open Nav Menu Function
 const openNavMenu = () => {
   headerNav.classList.toggle("showNav");
@@ -21,13 +24,22 @@ const openNavMenu = () => {
   middleBurger[1].classList.toggle("rotateMiddleTwo");
 };
 
+window.addEventListener("scroll", () => {
+  if (
+    mediaQueryDesktopMin.matches === true &&
+    window.scrollY > 1 &&
+    !headerNav.classList.contains("showNav")
+  ) {
+    headerNav.classList.add("navBackground");
+  } else {
+    headerNav.classList.remove("navBackground");
+  }
+});
+
 // click Event to Toggle Nav
 burgerBoxContainer.addEventListener("click", () => {
   openNavMenu();
 });
-
-// Media Query for Nav
-const mediaQueryDesktopMin = window.matchMedia("(min-width: 1280px)");
 
 if (!mediaQueryDesktopMin.matches === true) {
   // Position Each Slide

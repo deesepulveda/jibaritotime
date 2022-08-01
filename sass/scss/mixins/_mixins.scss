@@ -89,7 +89,7 @@
 }
 
 @mixin text-shadow {
-  text-shadow: 0.2rem 0.2rem 0.3rem $color-dark;
+  text-shadow: 0.1rem 0.1rem 0.2rem $color-gray-lite;
 }
 
 @mixin text-shadowdeep {
@@ -97,7 +97,7 @@
 }
 
 @mixin text-shadowgray {
-  text-shadow: 0.2rem 0.2rem 0.3rem $color-gray-lite;
+  text-shadow: 0.2rem 0.2rem 0.3rem $color-gray;
 }
 
 @mixin text-shadowgray-lite {

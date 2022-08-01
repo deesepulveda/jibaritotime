@@ -45,7 +45,9 @@ body {
   max-width: 120rem;
   height: 1rem;
   margin: 0 auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 90;
 }
 
 .header-nav {
@@ -55,12 +57,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 90;
-  transition: 0.4s ease;
-  -webkit-transition: 0.4s ease;
-  -moz-transition: 0.4s ease;
-  -ms-transition: 0.4s ease;
-  -o-transition: 0.4s ease;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
   transform: translateX(-100vw);
   -webkit-transform: translateX(-100vw);
   -moz-transform: translateX(-100vw);
@@ -169,13 +170,15 @@ body {
   -o-transform: translateX(0);
 }
 
+.navBackground {
+  background-color: #050505;
+  opacity: 0.8;
+}
+
 .hero-wrapper {
   width: 100vw;
   height: 100vh;
   position: relative;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,9 +225,10 @@ body {
   top: 0;
   left: 0;
   background-image: url(../public/images/JibaritoTimeNight.jpg);
-  background-position: left;
+  background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   z-index: -2;
 }
 .hero-container-top .hero-container-top-content {
@@ -581,7 +585,7 @@ body {
   height: 1rem;
   margin: 0 auto;
   position: relative;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -624,8 +628,8 @@ body {
   height: 0.3rem;
   position: relative;
   position: absolute;
-  background-color: #ffffff;
-  border: 0.1rem solid #ffffff;
+  background-color: #929191;
+  border: 0.1rem solid #929191;
   border-radius: 5rem;
   -webkit-border-radius: 5rem;
   -moz-border-radius: 5rem;
@@ -684,6 +688,372 @@ body {
   -moz-transform: rotate(-225deg);
   -ms-transform: rotate(-225deg);
   -o-transform: rotate(-225deg);
+}
+
+.main {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    height: 25rem;
+  }
+}
+.main h1,
+.main p {
+  text-transform: capitalize;
+}
+.main h1 {
+  color: rgb(0, 141, 85);
+  font-size: 2.4rem;
+  font-family: "Gothic-Century-Bold", sans-serif;
+  text-shadow: 0.1rem 0.1rem 0.2rem #929191;
+}
+@media only screen and (min-width: 768px) {
+  .main h1 {
+    font-size: 3rem;
+  }
+}
+.main p {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .main p {
+    font-size: 2rem;
+  }
+}
+
+.sections {
+  width: 100%;
+  height: auto;
+}
+
+.jibarito-ad-section {
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .jibarito-ad-section {
+    height: 50rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .jibarito-ad-section {
+    height: 60rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .jibarito-ad-section {
+    height: 75rem;
+  }
+}
+.jibarito-ad-section .bg-shape {
+  width: 100%;
+  height: 55%;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.jibarito-ad-section .bg-shape::before {
+  content: "";
+  width: 100%;
+  height: 50.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 141, 85);
+  clip-path: polygon(100% 40%, 0 100%, 100% 100%);
+  -webkit-clip-path: polygon(100% 40%, 0 100%, 100% 100%);
+  z-index: -1;
+}
+.jibarito-ad-section .bg-shape::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 141, 85);
+  z-index: -1;
+}
+.jibarito-ad-section .jibarito-ad-title {
+  padding-top: 2rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 768px) {
+  .jibarito-ad-section .jibarito-ad-title {
+    padding-top: 4rem;
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .jibarito-ad-section .jibarito-ad-title {
+    font-size: 6rem;
+  }
+}
+.jibarito-ad-section .jibarito-ad-content {
+  width: 32rem;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .jibarito-ad-section .jibarito-ad-content {
+    width: 45rem;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .jibarito-ad-section .jibarito-ad-content {
+    width: 45rem;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .jibarito-ad-section .jibarito-ad-content {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+  }
+}
+.jibarito-ad-section .jibarito-ad-content .jibarito-ad-content-info {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-shadow: 0.2rem 0.2rem 0.6rem #050505;
+}
+.jibarito-ad-section .jibarito-ad-content .jibarito-ad-content-info span {
+  margin-bottom: -1.5rem;
+  font-size: 6rem;
+  font-family: "Gothic-Century-Bold", sans-serif;
+  z-index: 2;
+}
+.jibarito-ad-section .jibarito-ad-content .jibarito-ad-content-info span:last-child {
+  font-size: 7rem;
+}
+.jibarito-ad-section .jibarito-ad-content .jibarito-ad-content-img {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  filter: drop-shadow(0.2rem 0.2rem 0.4rem #050505);
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.4rem #050505);
+}
+.jibarito-ad-section .jibarito-ad-content .jibarito-ad-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.jibarito-ad-section p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 768px) {
+  .jibarito-ad-section p {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .jibarito-ad-section p {
+    margin-top: 1rem;
+  }
+}
+
+.gluten-free-section {
+  height: auto;
+  margin: 1rem auto 4rem;
+}
+.gluten-free-section .gluten-image-box {
+  width: 80%;
+  height: 80%;
+  margin: 5rem auto 0;
+}
+.gluten-free-section .gluten-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.gluten-free-section .gluten-content-box {
+  width: 80%;
+  height: auto;
+  margin: 4rem auto 0;
+}
+.gluten-free-section .gluten-content-box p {
+  margin-top: 2rem;
+  text-indent: 2rem;
+  text-transform: initial;
+  text-align: justify;
+  font-size: 1.25rem;
+}
+.gluten-free-section .gluten-list-box {
+  width: 100%;
+  height: auto;
+  margin: 4rem auto 0;
+}
+.gluten-free-section .gluten-list-box .gluten-list-title {
+  font-size: 2rem;
+  font-family: "Gothic-Century-Bold", sans-serif;
+  text-transform: capitalize;
+}
+.gluten-free-section .gluten-list-box .gluten-list-ul {
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+}
+.gluten-free-section .gluten-list-box .gluten-list-ul .gluten-list-li {
+  width: 100%;
+  height: 3rem;
+  margin-top: 0.5rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gluten-free-section .gluten-list-box .gluten-list-ul .gluten-list-li .gluten-list-li-image-box {
+  width: 5%;
+  height: 100%;
+  margin-right: 1rem;
+}
+.gluten-free-section .gluten-list-box .gluten-list-ul .gluten-list-li .gluten-list-li-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.gluten-free-section .gluten-list-box .gluten-list-ul .gluten-list-li .gluten-list-li-items {
+  width: 75%;
+  height: auto;
+  font-size: 1.15rem;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.delivery-section {
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media only screen and (min-width: 1280px) {
+  .delivery-section {
+    height: 40rem;
+  }
+}
+.delivery-section .delivery-title,
+.delivery-section .delivery-subtitle {
+  font-family: "Gothic-Century-Bold", sans-serif;
+  text-transform: capitalize;
+}
+.delivery-section .delivery-title {
+  margin-top: 4rem;
+  font-size: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .delivery-section .delivery-title {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .delivery-section .delivery-title {
+    font-size: 5rem;
+  }
+}
+.delivery-section .delivery-subtitle {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+@media only screen and (min-width: 1280px) {
+  .delivery-section .delivery-subtitle {
+    font-size: 2.5rem;
+  }
+}
+.delivery-section .delivery-content-box {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delivery-section .delivery-content-box img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  width: 10rem;
+  height: auto;
+}
+@media only screen and (min-width: 1280px) {
+  .delivery-section .delivery-content-box img {
+    width: 18rem;
+    padding: 2rem;
+  }
+}
+
+.safety-section {
+  height: 35rem;
+  padding: 0 2.5rem;
+  color: #ffffff;
+  background-color: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.safety-section .safety-title {
+  font-size: 2rem;
+  font-family: "Gothic-Century-Bold-Italic", sans-serif;
+}
+@media only screen and (min-width: 1280px) {
+  .safety-section .safety-title {
+    font-size: 3rem;
+  }
+}
+.safety-section p {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-family: "Gothic-Century-Italic", sans-serif;
+}
+@media only screen and (min-width: 1280px) {
+  .safety-section p {
+    padding: 0 4rem;
+    font-size: 1.5rem;
+  }
+}
+.safety-section p:last-child {
+  font-family: "Gothic-Century-Bold-Italic", sans-serif;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 1280px) {
+  .safety-section p:last-child {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

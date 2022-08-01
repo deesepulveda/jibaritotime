@@ -1,0 +1,68 @@
+.delivery-section {
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include desktop {
+    & {
+      height: 40rem;
+    }
+  }
+
+  .delivery-title,
+  .delivery-subtitle {
+    font-family: $secondary-font;
+    text-transform: capitalize;
+  }
+
+  .delivery-title {
+    margin-top: 4rem;
+    font-size: 3rem;
+
+    @include tabletPortrait {
+      & {
+        font-size: 4rem;
+      }
+    }
+
+    @include desktop {
+      & {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  .delivery-subtitle {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+
+    @include desktop {
+      & {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .delivery-content-box {
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    @include flex-center;
+
+    img {
+      @include keep-it-hundo;
+      padding: 1rem;
+      width: 10rem;
+      height: auto;
+
+      @include desktop {
+        & {
+          width: 18rem;
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -5,8 +5,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 90;
-  @include transit4;
+
+  @include transit3;
   transform: translateX(-100vw);
   -webkit-transform: translateX(-100vw);
   -moz-transform: translateX(-100vw);
@@ -115,4 +115,9 @@
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
+}
+
+.navBackground {
+  background-color: $color-dark;
+  opacity: 0.8;
 }

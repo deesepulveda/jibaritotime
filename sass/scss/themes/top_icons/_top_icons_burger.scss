@@ -4,7 +4,7 @@
   height: 1rem;
   margin: 0 auto;
   position: relative;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   @include transformX;
@@ -39,8 +39,8 @@
         height: 0.3rem;
         position: relative;
         position: absolute;
-        background-color: $color-lite;
-        border: 0.1rem solid $color-lite;
+        background-color: $color-gray-lite;
+        border: 0.1rem solid $color-gray-lite;
         border-radius: 5rem;
         -webkit-border-radius: 5rem;
         -moz-border-radius: 5rem;
