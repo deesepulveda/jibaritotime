@@ -1,0 +1,56 @@
+.gallery-section {
+  height: auto;
+  padding-bottom: 5rem;
+  color: $color-lite;
+  background-color: $color-dark;
+
+  .gallery-section-title {
+    padding: 5rem;
+    font-size: 3rem;
+    font-family: $secondary-font;
+    letter-spacing: 0.5rem;
+  }
+
+  .gallery-section-image-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1rem;
+
+    .gallery-section-image-box {
+      width: 15rem;
+      height: 15rem;
+
+      img {
+        @include keep-it-hundo;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .gallery-section-image-btn-box {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    @include flex-center;
+
+    .gallery-btn {
+      width: 20rem;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+      border: 0.1rem solid $color-lite;
+      cursor: pointer;
+      @include transit3;
+
+      &:hover {
+        color: $color-dark;
+        background-color: $color-lite;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.social-media-section {
+  height: 20rem;
+  background-color: $color-green;
+  @include flex-center-col;
+
+  .social-media-title {
+    font-size: 2rem;
+    color: $color-lite;
+    font-family: $secondary-font;
+
+    @include tabletPortrait {
+      & {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .social-media-icons-container {
+    width: 50%;
+    max-width: 25rem;
+    height: auto;
+    margin: 4rem auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+
+      i {
+        color: $color-lite;
+        font-size: 3rem;
+        @include text-shadow;
+      }
+    }
+  }
+}

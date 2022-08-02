@@ -2,6 +2,7 @@
 
 const burgerBoxContainer = document.querySelector(".burger-box-container");
 const headerNav = document.querySelector(".header-nav");
+const headerNavLi = document.querySelectorAll(".header-li");
 const topBurger = document.querySelector(".top");
 const middleBurger = document.querySelectorAll(".middle");
 const bottomBurger = document.querySelector(".bottom");
@@ -12,6 +13,7 @@ const bottomContentBoxes = document.querySelectorAll(
 const prevBtn = document.querySelector(".hero-container-bottom-content-prev");
 const nextBtn = document.querySelector(".hero-container-bottom-content-next");
 const menuSlides = document.querySelectorAll(".menu-slides");
+const cateringSlides = document.querySelectorAll(".catering-slides");
 
 // Media Query for Nav
 const mediaQueryDesktopMin = window.matchMedia("(min-width: 1280px)");
@@ -25,6 +27,7 @@ const openNavMenu = () => {
   middleBurger[1].classList.toggle("rotateMiddleTwo");
 };
 
+// Add Background to Nav in Desktop Mode
 window.addEventListener("scroll", () => {
   if (
     mediaQueryDesktopMin.matches === true &&
@@ -37,15 +40,36 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// click Event to Toggle Nav
+// Nav Links Click Functions
+headerNavLi.forEach((h) => {
+  h.addEventListener("click", () => {
+    if (headerNav.classList.contains("showNav")) {
+      headerNav.classList.remove("showNav");
+      topBurger.classList.remove("removeTopBottom");
+      bottomBurger.classList.remove("removeTopBottom");
+      middleBurger[0].classList.remove("rotateMiddleOne");
+      middleBurger[1].classList.remove("rotateMiddleTwo");
+    }
+  });
+});
+
+// Click Event to Toggle Nav
 burgerBoxContainer.addEventListener("click", () => {
   openNavMenu();
 });
 
+// Position Each Slide
 if (!mediaQueryDesktopMin.matches === true) {
-  // Position Each Slide
   bottomContentBoxes.forEach((b, i) => {
     b.style.transform = `translateX(${100 * i}%)`;
+  });
+
+  menuSlides.forEach((m, i) => {
+    m.style.transform = `translateX(${100 * i}%)`;
+  });
+
+  cateringSlides.forEach((c, i) => {
+    c.style.transform = `translateX(${100 * i}%)`;
   });
 }
 
@@ -99,6 +123,7 @@ const moveThis = () => {
   setInterval(autoSlidePlay, time);
 };
 
+// Autoplay only on Mobile Device
 if (!mediaQueryDesktopMin.matches === true) {
   // AutoPlay Slider on Refresh
   window.onload = moveThis;
