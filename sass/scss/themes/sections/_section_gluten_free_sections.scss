@@ -23,6 +23,8 @@
     img {
       @include keep-it-hundo;
       object-fit: contain;
+      filter: drop-shadow(0.2rem 0.2rem 0.4rem $color-gray);
+      -webkit-filter: drop-shadow(0.2rem 0.2rem 0.4rem $color-gray);
     }
   }
 

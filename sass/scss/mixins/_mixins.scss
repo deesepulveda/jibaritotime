@@ -73,7 +73,7 @@
 //----------SHADOW MIXINS-----------
 
 @mixin shadow {
-  box-shadow: 0.2rem 0.2rem 0.4rem $color-dark;
+  box-shadow: 0.2rem 0.2rem 0.3rem $color-dark;
 }
 
 @mixin deep-shadow {
@@ -81,7 +81,7 @@
 }
 
 @mixin deep-shadow-gray {
-  box-shadow: 0.3rem 0.3rem 2rem $color-gray-lite;
+  box-shadow: 0.2rem 0.2rem 0.3rem $color-gray-lite;
 }
 
 @mixin deep-shadow-graylite {

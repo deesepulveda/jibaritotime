@@ -15,6 +15,7 @@
   .delivery-subtitle {
     font-family: $secondary-font;
     text-transform: capitalize;
+    @include text-shadowgray;
   }
 
   .delivery-title {
@@ -56,6 +57,8 @@
       padding: 1rem;
       width: 10rem;
       height: auto;
+      filter: drop-shadow(0.2rem 0.2rem 0.2rem $color-gray-lite);
+      -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem $color-gray-lite);
 
       @include desktop {
         & {

@@ -1,0 +1,104 @@
+.contact-section {
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  @include text-shadow;
+  //   border: 1px solid red;
+
+  .contact-business-container,
+  .contact-info-container,
+  .contact-hours-container,
+  .contact-map {
+    margin: 4rem auto 0;
+  }
+
+  .contact-business-container {
+    width: 80%;
+    text-align: left;
+    text-transform: initial;
+
+    .contact-business-brand-title {
+      font-size: 2.75rem;
+      font-family: $secondary-font;
+    }
+
+    .contact-business-brand-subtitle {
+      font-size: 1.65rem;
+    }
+  }
+
+  .contact-info-container {
+    width: 80%;
+    height: auto;
+
+    .contact-info-address,
+    .contact-info-phone,
+    .contact-info-email {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      .contact-info-icon,
+      .contact-info-content {
+        font-family: $secondary-font;
+        text-transform: initial;
+      }
+
+      .contact-info-icon {
+        margin-right: 1rem;
+        font-size: 2.25rem;
+        color: $color-green;
+      }
+
+      .contact-info-content {
+        text-align: left;
+        font-size: 2rem;
+
+        a {
+          color: $color-dark;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .contact-hours-container {
+    width: 80%;
+    height: auto;
+    text-align: left;
+    text-transform: initial;
+
+    .contact-hours-title {
+      font-size: 2.25rem;
+      font-family: $secondary-font;
+    }
+
+    li {
+      list-style-type: none;
+      font-size: 1.5rem;
+
+      &:nth-of-type(1) {
+        color: $color-green;
+        font-family: $secondary-font;
+      }
+    }
+  }
+
+  .contact-map {
+    box-shadow: 0 0 2rem $color-gray;
+
+    a {
+      @include keep-it-hundo;
+      text-decoration: none;
+
+      img {
+        @include keep-it-hundo;
+        object-fit: cover;
+      }
+    }
+  }
+}
