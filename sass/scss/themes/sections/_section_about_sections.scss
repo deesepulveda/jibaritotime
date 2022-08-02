@@ -1,6 +1,8 @@
 .about-section {
   height: 65rem;
   @include flex-center-col;
+  z-index: 6;
+  @include deep-shadow;
 
   @include tabletPortrait {
     & {
@@ -8,8 +10,15 @@
     }
   }
 
+  @include desktop {
+    & {
+      height: 100rem;
+    }
+  }
+
   .about-title {
     width: 80%;
+    max-width: 130rem;
     height: auto;
     margin: 0 auto;
     position: relative;
@@ -19,6 +28,12 @@
     font-family: $secondary-font;
     -webkit-text-stroke: 0.15rem $color-dark;
     -webkit-text-fill-color: transparent;
+
+    @include desktop {
+      & {
+        font-size: 6rem;
+      }
+    }
 
     &::after {
       content: "";
@@ -36,6 +51,13 @@
     font-size: 2rem;
     text-transform: initial;
     font-family: $secondary-font;
+    @include text-shadowgray;
+
+    @include desktop {
+      & {
+        font-size: 3rem;
+      }
+    }
   }
 
   p {
@@ -46,12 +68,19 @@
     text-transform: initial;
     text-align: justify;
     text-indent: 1rem;
+
+    @include desktop {
+      & {
+        font-size: 1.75rem;
+      }
+    }
   }
 
   .about-image-box {
     width: 80%;
     height: auto;
     margin-top: 2rem;
+    @include deep-shadow;
 
     @include tabletPortrait {
       & {
@@ -68,7 +97,7 @@
 
     img {
       @include keep-it-hundo;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 }

@@ -133,6 +133,7 @@
             border: 0.1rem solid $color-green;
             color: $color-green;
             @include transit4;
+            @include text-shadow;
 
             @include desktop {
               & {
@@ -158,6 +159,7 @@
       top: 50%;
       @include transformY;
       @include flex-center;
+      @include text-shadow;
       cursor: pointer;
 
       @include desktop {

@@ -1,7 +1,10 @@
 .social-media-section {
   height: 20rem;
+  position: relative;
   background-color: $color-green;
   @include flex-center-col;
+  z-index: 7;
+  @include deep-shadow;
 
   .social-media-title {
     font-size: 2rem;
@@ -28,6 +31,7 @@
 
     a {
       text-decoration: none;
+      @include transit3;
 
       i {
         color: $color-lite;
@@ -35,6 +39,14 @@
         @include text-shadow;
         filter: drop-shadow(0.2rem 0.2rem 0.4rem $color-dark);
         -webkit-filter: drop-shadow(0.2rem 0.2rem 0.4rem $color-dark);
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
       }
     }
   }

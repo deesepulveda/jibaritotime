@@ -1,95 +1,171 @@
 .contact-section {
-  height: 60rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  @include text-shadow;
-  //   border: 1px solid red;
+  height: 70rem;
+  position: relative;
+  @include flex-center-col;
+  justify-content: space-between;
 
-  .contact-business-container,
-  .contact-info-container,
-  .contact-hours-container,
-  .contact-map {
-    margin: 4rem auto 0;
-  }
-
-  .contact-business-container {
-    width: 80%;
-    text-align: left;
-    text-transform: initial;
-
-    .contact-business-brand-title {
-      font-size: 2.75rem;
-      font-family: $secondary-font;
-    }
-
-    .contact-business-brand-subtitle {
-      font-size: 1.65rem;
+  @include tabletPortrait {
+    & {
+      height: 70rem;
     }
   }
 
-  .contact-info-container {
+  @include tabletLandscape {
+    & {
+      height: 60rem;
+    }
+  }
+
+  .contact-title {
     width: 80%;
+    max-width: 130rem;
     height: auto;
+    margin: 4rem auto 0;
+    position: relative;
+    text-align: left;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-family: $secondary-font;
+    -webkit-text-stroke: 0.15rem $color-dark;
+    -webkit-text-fill-color: transparent;
 
-    .contact-info-address,
-    .contact-info-phone,
-    .contact-info-email {
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
+    @include desktop {
+      & {
+        margin: 5rem auto 0;
+        font-size: 6rem;
+      }
+    }
 
-      .contact-info-icon,
-      .contact-info-content {
+    &::after {
+      content: "";
+      @include keep-it-hundo;
+      position: absolute;
+      left: 50%;
+      bottom: -5%;
+      @include transformX;
+      border-bottom: 0.2rem dotted $color-dark;
+    }
+  }
+
+  .contact-top-container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto 2rem;
+
+    @include tabletPortrait {
+      & {
+        margin: 0 auto 4rem;
+      }
+    }
+
+    @include tabletLandscape {
+      & {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+
+    .contact-business-container {
+      width: 80%;
+      text-align: left;
+      text-transform: initial;
+
+      .contact-business-brand-title {
+        font-size: 2.75rem;
         font-family: $secondary-font;
-        text-transform: initial;
       }
 
-      .contact-info-icon {
-        margin-right: 1rem;
+      .contact-business-brand-subtitle {
+        font-size: 1.65rem;
+      }
+    }
+
+    .contact-info-container {
+      width: 80%;
+      height: auto;
+
+      .contact-info-address,
+      .contact-info-phone,
+      .contact-info-email {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .contact-info-icon,
+        .contact-info-content {
+          font-family: $secondary-font;
+          text-transform: initial;
+        }
+
+        .contact-info-icon {
+          margin-right: 1rem;
+          font-size: 2.25rem;
+          color: $color-green;
+        }
+
+        .contact-info-content {
+          text-align: left;
+          font-size: 2rem;
+
+          a {
+            color: $color-dark;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .contact-hours-container {
+      width: 80%;
+      height: auto;
+      text-align: left;
+      text-transform: initial;
+
+      .contact-hours-title {
         font-size: 2.25rem;
-        color: $color-green;
+        font-family: $secondary-font;
       }
 
-      .contact-info-content {
-        text-align: left;
-        font-size: 2rem;
+      li {
+        list-style-type: none;
+        font-size: 1.5rem;
 
-        a {
-          color: $color-dark;
-          text-decoration: none;
+        &:nth-of-type(1) {
+          color: $color-green;
+          font-family: $secondary-font;
+        }
+      }
+    }
+
+    .contact-business-container,
+    .contact-info-container,
+    .contact-hours-container {
+      margin: 4rem auto 0;
+      @include text-shadow;
+
+      @include tabletLandscape {
+        & {
+          width: calc(80% / 3);
         }
       }
     }
   }
 
-  .contact-hours-container {
-    width: 80%;
-    height: auto;
-    text-align: left;
-    text-transform: initial;
+  .contact-bottom-container {
+    width: 100%;
+    height: 15rem;
+    box-shadow: 0 0 2rem $color-gray;
 
-    .contact-hours-title {
-      font-size: 2.25rem;
-      font-family: $secondary-font;
-    }
-
-    li {
-      list-style-type: none;
-      font-size: 1.5rem;
-
-      &:nth-of-type(1) {
-        color: $color-green;
-        font-family: $secondary-font;
+    @include tabletPortrait {
+      & {
+        height: 20rem;
       }
     }
-  }
-
-  .contact-map {
-    box-shadow: 0 0 2rem $color-gray;
 
     a {
       @include keep-it-hundo;

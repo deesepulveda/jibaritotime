@@ -1,8 +1,11 @@
 .gallery-section {
   height: auto;
   padding-bottom: 5rem;
+  position: relative;
   color: $color-lite;
   background-color: $color-dark;
+  z-index: 5;
+  @include deep-shadow;
 
   .gallery-section-title {
     padding: 5rem;
@@ -14,11 +17,30 @@
   .gallery-section-image-container {
     width: 100%;
     height: auto;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     grid-gap: 1rem;
+
+    @include tabletPortrait {
+      & {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+    }
+
+    @include tabletLandscape {
+      & {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+    }
+
+    @include desktop {
+      & {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
 
     .gallery-section-image-box {
       width: 100%;

@@ -1,16 +1,32 @@
 .gluten-free-section {
-  height: auto;
-  max-width: 120rem;
-  margin: 1rem auto 4rem;
+  height: 100rem;
+  margin: 0 auto;
+  padding-top: 5rem;
+  position: relative;
+  z-index: 8;
+  @include deep-shadow;
+
+  @include tabletPortrait {
+    & {
+      height: 110rem;
+      padding-top: 6rem;
+    }
+  }
+
+  @include tabletLandscape {
+    & {
+      padding-top: 10rem;
+    }
+  }
 
   .gluten-image-box {
     width: 80%;
-    height: 80%;
-    margin: 5rem auto 0;
+    height: 15rem;
+    margin: 0 auto;
 
     @include tabletPortrait {
       & {
-        width: 50%;
+        height: 25rem;
       }
     }
 
@@ -30,12 +46,19 @@
 
   .gluten-content-box {
     width: 80%;
+    max-width: 120rem;
     height: auto;
     margin: 4rem auto 0;
 
     @include tabletPortrait {
       & {
         margin: 6rem auto 0;
+      }
+    }
+
+    @include tabletLandscape {
+      & {
+        margin: 8rem auto 0;
       }
     }
 
@@ -57,7 +80,15 @@
   .gluten-list-box {
     width: 100%;
     height: auto;
+    max-width: 120rem;
     margin: 4rem auto 0;
+    // margin: 4rem auto 0;
+
+    @include tabletLandscape {
+      & {
+        margin: 6rem auto 0;
+      }
+    }
 
     .gluten-list-title {
       font-size: 2rem;

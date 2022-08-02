@@ -1,6 +1,8 @@
 .catering-section {
   height: 120rem;
   position: relative;
+  z-index: 9;
+  @include deep-shadow;
 
   &::before {
     content: "";
@@ -44,6 +46,7 @@
       @include desktop {
         & {
           width: 90%;
+          font-size: 6rem;
         }
       }
 

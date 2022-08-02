@@ -4,6 +4,8 @@
   color: $color-lite;
   background-color: $color-dark;
   @include flex-center-col;
+  z-index: 15;
+  @include deep-shadow;
 
   .safety-title {
     font-size: 2rem;

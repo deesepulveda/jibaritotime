@@ -1,6 +1,8 @@
 .menu-section {
   height: 120rem;
   position: relative;
+  z-index: 10;
+  @include deep-shadow;
 
   &::before {
     content: "";
@@ -45,6 +47,7 @@
       @include desktop {
         & {
           width: 90%;
+          font-size: 6rem;
         }
       }
 
@@ -55,7 +58,7 @@
         left: 50%;
         bottom: -5%;
         @include transformX;
-        border-bottom: 0.1rem dotted $color-lite;
+        border-bottom: 0.2rem dotted $color-lite;
       }
     }
 

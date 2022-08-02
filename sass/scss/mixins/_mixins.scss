@@ -77,7 +77,7 @@
 }
 
 @mixin deep-shadow {
-  box-shadow: 0 0.7rem 5rem $color-dark;
+  box-shadow: 0 0.7rem 2rem $color-dark;
 }
 
 @mixin deep-shadow-gray {
